@@ -5,9 +5,11 @@ import { getDatabase } from "firebase/database";
 import { GoogleAuthProvider,getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDz4nBp5X6GwvpcUsRcWfJbE_Q7YPdm61I",
-  authDomain: "clone-66635.firebaseapp.com",
+  // apiKey: process.env.APIKEY
+  apiKey : import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain : import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: "clone-66635",
   storageBucket: "clone-66635.appspot.com",
   messagingSenderId: "808061232856",
